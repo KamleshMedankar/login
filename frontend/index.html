@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login and SignUp</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <div class="form-container">
+      <h2 id="form-title">Login</h2>
+      <form id="login-form" onsubmit="login(event)">
+        <input type="email" id="email" placeholder="Enter your email" required />
+        <input type="password" id="password" placeholder="Enter your password" required />
+        <button type="submit">Login</button>
+      </form>
+
+      <p>Not registered? <a href="javascript:void(0)" onclick="toggleForms()">Sign Up</a></p>
+    </div>
+
+    <div class="form-container" id="signup-container" style="display:none;">
+      <h2 id="form-title">Sign Up</h2>
+      <form id="signup-form" onsubmit="signup(event)">
+        <input type="email" id="signup-email" placeholder="Enter your email" required />
+        <input type="password" id="signup-password" placeholder="Enter your password" required />
+        <button type="submit">Sign Up</button>
+      </form>
+
+      <p>Already have an account? <a href="javascript:void(0)" onclick="toggleForms()">Login</a></p>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
